@@ -1,5 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+jest.mock('react-day-picker', () => ({
+  DayPicker: jest.fn(() => <div role="date-picker" />), // Mock implementation
+}));
 
 test('renders learn react link', () => {
   render(<App />);
