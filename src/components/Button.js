@@ -19,6 +19,7 @@ const Button = ({
       className={className} 
       onClick={onClick} 
       disabled={disabled}
+      data-testid='icon-play'
     >
       {icon === 'play' && <FontAwesomeIcon icon={faPlay} />}
       {children}

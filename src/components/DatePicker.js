@@ -27,6 +27,7 @@ const DatePickerEl = ({ initialDate, onDateChange }) => {
                     selected: styles.daySelected,
                     today: styles.today,
                 }}
+                
             />
 
         </div>

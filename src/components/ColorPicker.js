@@ -13,7 +13,7 @@ const ColorPicker = ({ colors, onColorSelect, selected }) => {
     };
 
     return (
-        <div className={styles.colorPicker} role='colorbox'>
+        <div className={styles.colorPicker}>
             <h4>Colours</h4>
             <div className={styles.colorGrid}>
                 {colors.map(color => (

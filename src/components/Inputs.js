@@ -51,6 +51,7 @@ const Inputs = ({
                     disabled={disabled}
                     placeholder="Enter your username"
                     className={`${styles.input} ${active ? styles.active : ''} ${nameError ? styles.error : ''} `}
+                    data-testid='username'
                 />
                 </div>
                 {nameError && <span className={styles.errorMessage}>{nameError}</span>}
@@ -66,6 +67,7 @@ const Inputs = ({
                         placeholder="Enter your password"
                         className={`${styles.input} ${active ? styles.active : ''} ${passwordError ? styles.error : ''} `}
                         disabled={disabled}
+                        data-testid='password'
                     />
                     <span className={styles.iconEye} onClick={disabled ? null : handleShowPassword} role="show"><FontAwesomeIcon icon={faRegularEye} /></span>
                 </div>

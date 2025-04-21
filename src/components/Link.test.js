@@ -2,17 +2,15 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Link from './Link';
 
 describe('Link Component', () => {
-  let originalLocation;
-
+  
   beforeAll(() => {
-    originalLocation = window.location; 
     delete window.location;
-    window.location = { assign: jest.fn() }; 
+    window.location = { assign: jest.fn() };
   });
 
   afterAll(() => {
-    window.location = originalLocation; 
-  }); 
+    window.location = { assign: () => {} };
+  });
 
   test('renders Link correctly', () => {
     render(<Link href="https://example.com">Link</Link>);
@@ -26,13 +24,14 @@ describe('Link Component', () => {
     const linkElement = screen.getByText(/link/i);
     fireEvent.click(linkElement);
     expect(window.location.assign).toHaveBeenCalledWith('https://example.com');
-
   });
 
   test('Link is disabled when disabled prop is true', () => {
     render(<Link href="https://example.com" disabled={true}>Link</Link>);
     const linkElement = screen.getByText(/link/i);
     expect(linkElement).toHaveAttribute('aria-disabled', 'true');
+    fireEvent.click(linkElement);
+    expect(window.location.assign).not.toHaveBeenCalled();
   });
 
 });

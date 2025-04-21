@@ -12,6 +12,7 @@ module.exports = {
   },
   testEnvironment: 'jsdom',
   transformIgnorePatterns: [
-    "/node_modules/(?!date-fns|react-day-picker)"
+    "/node_modules/(?!date-fns|react-day-picker|@babel)"
   ],
+
 };

@@ -8,6 +8,12 @@ describe('Button Component', () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
+  test('renders button with icon', () =>{
+    render(<Button icon='play'>Button</Button>);
+    const iconElement = screen.getByTestId('icon-play');
+    expect(iconElement).toBeInTheDocument();
+  });
+
   test('calls onClick handler when clicked', () => {
     const handleClick = jest.fn();
     render(<Button onClick={handleClick}>Button</Button>);
