@@ -4,8 +4,8 @@ jest.mock('react-day-picker', () => ({
   DayPicker: jest.fn(() => <div role="date-picker" />)
 }));
 
-test('renders learn react link', () => {
+test('renders theme toggle button', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const buttonElement = screen.getByText(/🌙|☀️/);
+  expect(buttonElement).toBeInTheDocument();
 });

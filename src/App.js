@@ -119,15 +119,15 @@ function App() {
       </div>
 
       <div className='check-group'>
-        <div className='checkbox-element app-element'>
-          <Checkbox checked={true} />
-          <Checkbox checked={false} />
-        </div>
+      <div className='checkbox-element app-element'>
+        <Checkbox checked={true}/>
+        <Checkbox checked={false}/>
+      </div>
 
-        <div className='checkbox-text-element app-element'>
-          <Checkbox checked={true} label="Text" />
-          <Checkbox checked={false} label="Text" />
-        </div>
+      <div className='checkbox-text-element app-element'>
+        <Checkbox checked={true} label="Text"/>
+        <Checkbox checked={false} label="Text"/>
+      </div>
       </div>
 
       <div className='icon-element app-element'>

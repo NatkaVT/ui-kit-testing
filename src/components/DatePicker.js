@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { DayPicker } from 'react-day-picker';
+import 'react-day-picker/style.css';
 import styles from './DatePicker.module.css';
 import PropTypes from 'prop-types';
-import DatePickerEl from "./DatePickerWithStyles";
 
 const DatePickerEl = ({ initialDate, onDateChange }) => {
     const [startDate, setStartDate] = useState(initialDate || new Date());
